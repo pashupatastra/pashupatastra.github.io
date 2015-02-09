@@ -16,7 +16,7 @@ body{
 }
 p{
 	font-family: 'Cardo', serif;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.4;
 	color: #ffffff;
 	text-decoration: none;
@@ -51,7 +51,7 @@ a:hover{
 .lp{
 	height: 120px;
 	position: absolute;
-	bottom: 120px;
+	bottom: 140px;
 	left: 40px;
 }
 .lp-img{
@@ -75,11 +75,9 @@ a:hover{
 /* Links */
 
 .links{
-	left: 50%;
-	bottom: 20px;
+	left: 40px;
+	bottom: 0px;
 	position: absolute;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
 }
 .icon{
 	width: 30px;
@@ -87,7 +85,7 @@ a:hover{
 	border-radius: 15px;
 	background-image: url(../img/icons.png);
 	float: left;
-	margin: 0 0 0 10px;
+	margin: 0 0 20px 10px;
 	-webkit-transition: all 0.3s ease;
 		 -moz-transition: all 0.3s ease;
 			 -o-transition: all 0.3s ease;
@@ -126,7 +124,7 @@ a:hover{
 .tour{
 	text-align: right;
 	position: absolute;
-	bottom: 120px;
+	bottom: 140px;
 	right: 40px;
 }
 
@@ -153,6 +151,9 @@ a:hover{
 	body{
 		background-image: url(../img/bg.jpg);
 	}
+	p{
+		padding:10px 0;
+	}
 	.logo{
 		display: block;
 	}
@@ -165,6 +166,7 @@ a:hover{
 	.links{
 		position: relative;
 		bottom: auto;
+		left: auto;
 		margin: 20px 0;
 	}
 	.tour{
