@@ -1,7 +1,18 @@
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,700);
 
 html, body{
+	width: 100%;
 	height: 100%;
+}
+body{
+	background-image: url(../img/big-gif.gif);
+	-webkit-background-size: cover;
+		 -moz-background-size: cover;
+			 -o-background-size: cover;
+					background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 p{
 	font-family: 'Cardo', serif;
@@ -21,14 +32,7 @@ a:hover{
 .container{
 	width: 100%;
 	height: 100%;
-	background-image: url(../img/big-gif.gif);
-	-webkit-background-size: cover;
-		 -moz-background-size: cover;
-			 -o-background-size: cover;
-					background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center center;
+	position: absolute;
 }
 
 /* Logo */
@@ -42,24 +46,19 @@ a:hover{
 	margin-top: 20px;
 }
 
-/* Left */
-
-.left{
-	position: absolute;
-	bottom: 40px;
-	left: 40px;
-}
-
 /* LP release info */
 
 .lp{
 	height: 120px;
-	position: relative;
+	position: absolute;
+	bottom: 120px;
+	left: 40px;
 }
 .lp-img{
-	width: 120px;
-	height: 120px;
+	width: 80px;
+	height: 80px;
 	float: left;
+	margin-top: 20px;
 }
 .lp-text{
 	float: left;
@@ -76,8 +75,11 @@ a:hover{
 /* Links */
 
 .links{
-	margin: 0 0 0 120px;
-	position: relative;
+	left: 50%;
+	bottom: 20px;
+	position: absolute;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 .icon{
 	width: 30px;
@@ -124,7 +126,7 @@ a:hover{
 .tour{
 	text-align: right;
 	position: absolute;
-	bottom: 42px;
+	bottom: 120px;
 	right: 40px;
 }
 
@@ -148,20 +150,21 @@ a:hover{
 }
 
 @media only screen and (max-width: 940px) {
-	.container{
+	body{
 		background-image: url(../img/bg.jpg);
-		background-attachment: scroll;
 	}
 	.logo{
 		display: block;
 	}
-	.left{
+	.lp{
 		position: relative;
 		left: auto;
 		bottom: auto;
 		margin: 0 0 0 20px;
 	}
 	.links{
+		position: relative;
+		bottom: auto;
 		margin: 20px 0;
 	}
 	.tour{
@@ -171,5 +174,6 @@ a:hover{
 		text-align: left;
 		float: left;
 		padding: 20px;
+		width: 100%;
 	}
 }
