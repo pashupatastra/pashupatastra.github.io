@@ -421,7 +421,7 @@ section#profile{
 #contact .container .email{
 	text-align: center;
 }
-#contact .container .links{
+#contact .container .copyright{
 	text-align: right;
 }
 
@@ -457,7 +457,7 @@ footer{
 	#contact .container .email{
 		text-align: left;
 	}
-	#contact .container .links{
+	#contact .container .copyright{
 		text-align: left;
 	}
 	footer{
