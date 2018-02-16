@@ -1,26 +1,41 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);
+/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);*/
+
+@font-face{
+	font-family:'GT-Walsheim';
+	src:url('../fonts/gt-walsheim-web.woff?1416498639') format('woff'),
+	url('../fonts/gt-walsheim-web.ttf?1416498640') format('truetype'),
+	url('../fonts/gt-walsheim-web.svg#gtwalsheimweb') format('svg');
+	font-weight:400;
+	font-style:normal;
+}
+@font-face{
+	font-family:'GT-Walsheim';
+	src:url('../fonts/gt-walsheim-medium.woff?1416498645') format('woff'),
+	url('../fonts/gt-walsheim-medium.ttf?1416498642') format('truetype'),
+	url('../fonts/gt-walsheim-medium.svg#gtwalsheimmedium') format('svg');
+	font-weight:600;
+	font-style:normal;
+}
 
 html, body{
 	height: 100%;
+	font-family:'GT-Walsheim',Helvetica,Arial,sans-serif;
 }
 p{
-	font-family:'Lato',Helvetica,Arial,sans-serif;
 	font-weight:400;
 	font-style:normal;
-	letter-spacing: 1px;
 	line-height: 1.6;
+	font-size: 18px;
 }
 h1{
-	font-family:'Lato',Helvetica,Arial,sans-serif;
-	font-weight:700;
+	font-weight:600;
 	font-style:normal;
 	letter-spacing: 1px;
 	line-height: 1.6;
 	padding-bottom: 20px;
 }
 h2{
-	font-family:'Lato',Helvetica,Arial,sans-serif;
-	font-weight:700;
+	font-weight:600;
 	font-style:normal;
 	letter-spacing: 1px;
 	line-height: 1.6;
@@ -32,6 +47,10 @@ a{
 }
 a:hover{
 	opacity: 0.2;
+}
+strong{
+	font-weight: 600;
+	text-decoration: underline;
 }
 button{
 	transition: all 0.5s ease;
@@ -46,11 +65,45 @@ button:hover{
 	opacity: 0;
 	cursor: pointer;
 }
-#logo{
-	transition: all 0.5s ease;
+
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* iframe
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+iframe.landscape{
+	width: 100%;
+	height: 439px;
 }
-#logo:hover{
-	opacity: 0.2;
+iframe.portrait{
+	width: 100%;
+	height: 818px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	iframe.landscape{
+		height: 349px;
+	}
+	iframe.portrait{
+		height: 647px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	iframe.landscape{
+		height: 169px;
+	}
+	iframe.portrait{
+		height: 533px;
+	}	
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	iframe.landscape{
+		height: 236px;
+	}
+	iframe.portrait{
+		height: 747px;
+	}		
 }
 
 /* ------------------------------------------------------------ *\
@@ -67,7 +120,6 @@ header{
 }
 #logo{
 	background: url(../icons/logo.svg);
-	/*border-radius: 30px;*/
 	width: 60px;
 	height: 60px;
 	margin: 40px 0 0 40px;
@@ -76,149 +128,43 @@ header{
 .no-svg #logo{
 	background: url(../icons/logo.png);
 }
-button#trigger-overlay{
-	background: url(../icons/menu.svg);
+#logo{
+	transition: all 0.5s ease;
+}
+#logo:hover{
+	opacity: 0.2;
+}
+#nav-work{
+	background: url(../icons/work.svg);
 	width: 60px;
 	height: 60px;
-	/*border-radius: 30px;*/
-	margin: 40px 40px 0 0;
-	border: none;
+	margin: 40px 20px 0 0;
 	float: right;
 }
-.no-svg button#trigger-overlay{
-	background: url(../icons/menu.png);
+.no-svg #nav-work{
+	background: url(../icons/work.png);
 }
-
-/* ------------------------------------------------------------ *\
-|* ------------------------------------------------------------ *|
-|* menu
-|* ------------------------------------------------------------ *|
-\* ------------------------------------------------------------ */
-
-/* Overlay style */
-.overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(3,7,10,0.9);
+#nav-work{
+	transition: all 0.5s ease;
 }
-
-/* Overlay closing cross */
-.overlay .overlay-close {
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	right: 30px;
-	top: 30px;
-	overflow: hidden;
-	border: none;
-	background: url(../icons/cross.svg) no-repeat center center;
-	text-indent: 200%;
-	color: transparent;
-	outline: none;
-	z-index: 600;
+#nav-work:hover{
+	opacity: 0.2;
 }
-.no-svg .overlay .overlay-close {
-	background: url(../icons/cross.png) no-repeat center center;
+#nav-profile{
+	background: url(../icons/profile.svg);
+	width: 60px;
+	height: 60px;
+	margin: 40px 40px 0 0;
+	float: right;
 }
-
-/* Menu style */
-.overlay nav {
-	text-align: center;
-	position: relative;
-	top: 50%;
-	height: 60%;
-	font-size: 54px;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+.no-svg #nav-profile{
+	background: url(../icons/profile.png);
 }
-
-.overlay ul {
-	list-style: none;
-	padding: 0;
-	margin: 0 auto;
-	display: inline-block;
-	height: 100%;
-	position: relative;
+#nav-profile{
+	transition: all 0.5s ease;
 }
-
-.overlay ul li {
-	display: block;
-	height: 20%;
-	height: calc(100% / 5);
-	min-height: 54px;
-}
-
-.overlay ul li a {
-	font-weight: 300;
-	display: block;
-	color: #ffffff;
-	-webkit-transition: all 0.5 ease;
-	transition: all 0.5 ease;
-}
-
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-	opacity: 0.3;
-}
-
-/* SVG styles */
-
-.work{
-	fill: #ffffff;
-	width: 220px;
-	height: 40px;
-}
-.profile{
-	fill: #ffffff;
-	width: 283px;
-	height: 40px;
-}
-.contact{
-	fill: #ffffff;
-	width: 341px;
-	height: 40px;
-}
-
-/* Effects */
-.overlay-hugeinc {
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-	transition: opacity 0.5s, visibility 0s 0.5s;
-}
-
-.overlay-hugeinc.open {
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
-}
-
-.overlay-hugeinc nav {
-	-webkit-perspective: 1200px;
-	perspective: 1200px;
-}
-
-.overlay-hugeinc nav ul {
-	opacity: 0.4;
-	-webkit-transform: translateY(-25%) rotateX(35deg);
-	transform: translateY(-25%) rotateX(35deg);
-	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-	transition: transform 0.5s, opacity 0.5s;
-}
-
-.overlay-hugeinc.open nav ul {
-	opacity: 1;
-	-webkit-transform: rotateX(0deg);
-	transform: rotateX(0deg);
-}
-
-.overlay-hugeinc.close nav ul {
-	-webkit-transform: translateY(25%) rotateX(-35deg);
-	transform: translateY(25%) rotateX(-35deg);
+#nav-profile:hover{
+	opacity: 0.2;
 }
 
 /* ------------------------------------------------------------ *\
@@ -298,6 +244,9 @@ a.imgwrap:hover{
 	visibility: visible;
 	opacity: 1;
 }
+.above{
+	z-index: 500;
+}
 
 /* ------------------------------------------------------------ *\
 |* ------------------------------------------------------------ *|
@@ -330,11 +279,11 @@ a.imgwrap:hover{
 
 /* project title backgrounds */
 
-.bonobo{
-	background-image: url(../img/bonobo/001.jpg);
-}
 .no-more-heroes{
 	background-image: url(../img/no-more-heroes/001.jpg);
+}
+.bonobo{
+	background-image: url(../img/bonobo/001.jpg);
 }
 .alvarado-gallery{
 	background-image: url(../img/alvarado-gallery/001.jpg);
@@ -345,26 +294,38 @@ a.imgwrap:hover{
 .olympic{
 	background-image: url(../img/olympic/001.jpg);
 }
+.foundations-ep{
+	background-image: url(../img/foundations-ep/001.jpg);
+}
+.louis-leeson{
+	background-image: url(../img/louis-leeson/001.jpg);
+}
+.olivia-mansfield{
+	background-image: url(../img/olivia-mansfield/001.jpg);
+}
+.sounds-of-the-samurai-1{
+	background-image: url(../img/sounds-of-the-samurai-1/001.jpg);
+}
+.kaleidoscope{
+	background-image: url(../img/kaleidoscope/001.jpg);
+}
 .forward3d{
 	background-image: url(../img/forward3d/001.jpg);
 }
 .cardwall{
 	background-image: url(../img/cardwall/001.jpg);
 }
-.louis-leeson{
-	background-image: url(../img/louis-leeson/001.jpg);
+.fixfaff{
+	background-image: url(../img/fixfaff/001.jpg);
 }
-.foundations-ep{
-	background-image: url(../img/foundations-ep/001.jpg);
+.mol-events{
+	background-image: url(../img/mol-events/001.jpg);
 }
-.sounds-of-the-samurai-1{
-	background-image: url(../img/sounds-of-the-samurai-1/001.jpg);
+.the-poetry-we-make{
+	background-image: url(../img/the-poetry-we-make/001.jpg);
 }
-.third-estate{
-	background-image: url(../img/third-estate/001.jpg);
-}
-.olivia-mansfield{
-	background-image: url(../img/olivia-mansfield/001.jpg);
+.london-fashion-week{
+	background-image: url(../img/london-fashion-week/001.jpg);
 }
 
 /* project intros */
@@ -377,6 +338,10 @@ a.imgwrap:hover{
 
 #project-img{
 	padding-bottom: 40px;
+}
+
+img.marg{
+	margin-top: 20px;
 }
 
 /* ------------------------------------------------------------ *\
@@ -482,6 +447,12 @@ footer{
 	}
 	#logo{
 		margin: 20px 0 0 20px;
+	}
+	#nav-work{
+		margin: 20px 10px 0 0;
+	}
+	#nav-profile{
+		margin: 20px 20px 0 0;
 	}
 	button#trigger-overlay{
 		margin: 20px 20px 0 0;

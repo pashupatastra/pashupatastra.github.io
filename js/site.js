@@ -12,8 +12,5 @@ $(document).ready(function() {
 	    }
 	  }
 	});
-	// hide nav - contact
-	
 
 });
-
