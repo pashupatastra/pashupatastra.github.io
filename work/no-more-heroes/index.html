@@ -35,7 +35,7 @@
 	<body>
 
     <header>
-      <a href="http://arjunmahadevan.com"><div id="logo"></div></a>
+      <a href="../../"><div id="logo"></div></a>
       <a href="../../profile/"><div id="nav-profile"></div></a>
       <a href="../../work/"><div id="nav-work"></div></a>
     </header>
@@ -77,12 +77,17 @@
           <h1 class="twelve columns alpha omega">Contact &mdash;</h1>
           <p class="four columns alpha"><a href="mailto:info@arjunmahadevan.com">info@arjunmahadevan.com</a></p>
           <p class="four columns email"><a href="https://www.facebook.com/arjunmahadevandesign" target="_blank">Facebook</a> &mdash; <a href="http://linkedin.com/in/arjunmahadevan" target="_blank">LinkedIn</a></p>
-          <p class="four columns omega copyright">&copy; 2018, Arjun Mahadevan</p>
+          <p class="four columns omega copyright">&copy; <span id="year"></span>, Arjun Mahadevan</p>
         </div>
       </div>
     </section>
 
     <script src="../../js/classie.js"></script>
+
+    <script>
+      var d = new Date();
+      document.getElementById("year").innerHTML = d.getFullYear();
+    </script>
 
 	</body>
 
