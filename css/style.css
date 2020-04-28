@@ -377,8 +377,9 @@ section#profile{
 \* ------------------------------------------------------------ */
 
 #contact{
-	border-top: 1px solid #494d50;
+	/*border-top: 1px solid #494d50;*/
 	width: 100%;
+	background-color: #ebecef;
 }
 #contact .container{
 	padding: 80px 0 60px 0;
