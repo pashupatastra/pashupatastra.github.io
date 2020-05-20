@@ -381,10 +381,6 @@ section#bio {
 		text-align: left;
 		margin-top: 20px;
 	}
-	section#about {
-		margin-bottom: 80px;
-		padding-top: 100px;
-	}
 }
 
 @media screen and (max-width: 568px) {
@@ -401,7 +397,6 @@ section#bio {
 		font-size: 21px
 	}
 	#bio p {
-		padding-bottom: 20px;
 		font-size: 21px;
 	}
 	#bio h1 {
