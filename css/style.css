@@ -1,6 +1,6 @@
 /*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);*/
 
-@font-face{
+@font-face {
 	font-family:'GT-Walsheim';
 	src:url('../fonts/gt-walsheim-web.woff?1416498639') format('woff'),
 	url('../fonts/gt-walsheim-web.ttf?1416498640') format('truetype'),
@@ -8,7 +8,7 @@
 	font-weight:400;
 	font-style:normal;
 }
-@font-face{
+@font-face {
 	font-family:'GT-Walsheim';
 	src:url('../fonts/gt-walsheim-medium.woff?1416498645') format('woff'),
 	url('../fonts/gt-walsheim-medium.ttf?1416498642') format('truetype'),
@@ -16,54 +16,53 @@
 	font-weight:600;
 	font-style:normal;
 }
+@font-face {
+    font-family:'GT-Haptik';
+    src: url('../fonts/gthaptik-webfont.woff2') format('woff2'),
+         url('../fonts/gthaptik-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-html, body{
+html, body {
 	height: 100%;
 	font-family:'GT-Walsheim',Helvetica,Arial,sans-serif;
+	font-size: 16px;
 }
-p{
+p {
 	font-weight:400;
 	font-style:normal;
 	line-height: 1.6;
-	font-size: 18px;
+	font-size: 16px;
 }
-h1{
+
+h1 {
 	font-weight:600;
 	font-style:normal;
 	line-height: 1.6;
 	padding-bottom: 20px;
-	font-size: 18px;
+	font-size: 16px;
 }
-h2{
+h2 {
 	font-weight:600;
 	font-style:normal;
 	letter-spacing: 1px;
 	line-height: 1.6;
 }
-a{
+a {
 	color: #000000;
 	text-decoration: none;
 	transition: all 0.5s ease;
 }
-a:hover{
+a:hover {
 	opacity: 0.2;
 }
-strong{
+strong {
+	font-weight: 600;
+}
+.hyperlink {
 	font-weight: 600;
 	text-decoration: underline;
-}
-button{
-	transition: all 0.5s ease;
-}
-button:focus {
-	outline:0;
-}
-button:focus {
-	opacity: 0;
-}
-button:hover{
-	opacity: 0;
-	cursor: pointer;
 }
 
 /* ------------------------------------------------------------ *\
@@ -72,36 +71,36 @@ button:hover{
 |* ------------------------------------------------------------ *|
 \* ------------------------------------------------------------ */
 
-iframe.landscape{
+iframe.landscape {
 	width: 100%;
 	height: 439px;
 }
-iframe.portrait{
+iframe.portrait {
 	width: 100%;
 	height: 818px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-	iframe.landscape{
+	iframe.landscape {
 		height: 349px;
 	}
-	iframe.portrait{
+	iframe.portrait {
 		height: 647px;
 	}
 }
 @media only screen and (max-width: 767px) {
-	iframe.landscape{
+	iframe.landscape {
 		height: 169px;
 	}
-	iframe.portrait{
+	iframe.portrait {
 		height: 533px;
 	}	
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	iframe.landscape{
+	iframe.landscape {
 		height: 236px;
 	}
-	iframe.portrait{
+	iframe.portrait {
 		height: 747px;
 	}		
 }
@@ -112,58 +111,38 @@ iframe.portrait{
 |* ------------------------------------------------------------ *|
 \* ------------------------------------------------------------ */
 
-header{
+header {
 	position: fixed;
 	display: inline;
 	width: 100%;
 	z-index: 400;
 }
-#logo{
+#logo {
 	background: url(../icons/logo.svg);
-	width: 60px;
-	height: 60px;
+	width: 30px;
+	height: 30px;
+	transition: all 0.5s ease;
 	margin: 40px 0 0 40px;
 	float: left;
 }
-.no-svg #logo{
+.no-svg #logo {
 	background: url(../icons/logo.png);
 }
-#logo{
-	transition: all 0.5s ease;
-}
-#logo:hover{
+#logo:hover {
 	opacity: 0.2;
 }
-#nav-work{
-	background: url(../icons/work.svg);
-	width: 60px;
-	height: 60px;
-	margin: 40px 20px 0 0;
-	float: right;
-}
-.no-svg #nav-work{
-	background: url(../icons/work.png);
-}
-#nav-work{
-	transition: all 0.5s ease;
-}
-#nav-work:hover{
-	opacity: 0.2;
-}
-#nav-profile{
-	background: url(../icons/profile.svg);
-	width: 60px;
-	height: 60px;
+#about {
 	margin: 40px 40px 0 0;
 	float: right;
-}
-.no-svg #nav-profile{
-	background: url(../icons/profile.png);
-}
-#nav-profile{
+	background: url(../icons/about.svg);
+	width: 30px;
+	height: 30px;
 	transition: all 0.5s ease;
 }
-#nav-profile:hover{
+.no-svg #about {
+	background: url(../icons/about.png);
+}
+#about:hover {
 	opacity: 0.2;
 }
 
@@ -173,16 +152,15 @@ header{
 |* ------------------------------------------------------------ *|
 \* ------------------------------------------------------------ */
 
-#intro{
+#intro {
 	height: 100%;
 	width: 100%;
 	background: #ffffff url(../icons/title_intro.svg) center center no-repeat;
 }
-.no-svg #intro{
+.no-svg #intro {
 	background: url(../icons/title_intro.png);
 }
-#arrow,
-#arrow2{
+#arrow {
 	position:absolute;
 	bottom: 80px;
 	left: 50%;
@@ -196,38 +174,24 @@ header{
 	height: 18px;
 	transition: all 0.5s ease;
 }
-#arrow2{
-	background: url(../icons/arrowdown_white.svg) center center no-repeat;
-}
-.no-svg #arrow{
+.no-svg #arrow {
 	background: url(../icons/arrowdown.png);
 }
-.no-svg #arrow2{
-	background: url(../icons/arrowdown_white.png);
-}
-#arrow:hover,
-#arrow2:hover{
+#arrow:hover{
 	opacity: 0.2;
 }
-
-/* ------------------------------------------------------------ *\
-|* ------------------------------------------------------------ *|
-|* work
-|* ------------------------------------------------------------ *|
-\* ------------------------------------------------------------ */
-
-section#work{
+section#work {
 	margin-bottom: 80px;
 	padding-top: 40px;
 }
-a.imgwrap:hover{
+a.imgwrap:hover {
 	opacity: 1;
 }
-.imgwrap{
+.imgwrap {
 	position: relative;
 	transition: all 0.5s ease;
 }
-.imgtext{
+.imgtext {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -240,12 +204,9 @@ a.imgwrap:hover{
 	color: #ffffff;
 	padding: 40px 20px 20px 40px;
 }
-.imgwrap:hover .imgtext{
+.imgwrap:hover .imgtext {
 	visibility: visible;
 	opacity: 1;
-}
-.above{
-	z-index: 500;
 }
 
 /* ------------------------------------------------------------ *\
@@ -256,7 +217,7 @@ a.imgwrap:hover{
 
 /* project titles */
 
-#project-title{
+#project-title {
 	height: 100%;
 	width: 100%;
 	background-position: center center;
@@ -264,10 +225,10 @@ a.imgwrap:hover{
 	background-attachment: fixed;
 	position: relative;
 }
-.fullscreen{
+.fullscreen {
 	height: 100%;
 }
-#title{
+#title {
 	position: absolute;
 	top: 50%;
 	-webkit-transform: translate(0,-50%);
@@ -277,98 +238,90 @@ a.imgwrap:hover{
 					transform: translate(0,-50%);
 }
 
+
+#project-title h1{
+	font-family:'GT-Haptik','GT-Walsheim',Helvetica,Arial,sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	font-size: 80px
+}
+
 /* project title backgrounds */
 
-.no-more-heroes{
+.no-more-heroes {
 	background-image: url(../img/no-more-heroes/001.jpg);
 }
-.bonobo{
-	background-image: url(../img/bonobo/001.jpg);
-}
-.alvarado-gallery{
-	background-image: url(../img/alvarado-gallery/001.jpg);
-}
-.pain-at-the-dentist{
-	background-image: url(../img/pain-at-the-dentist/001.jpg);
-}
-.olympic{
+.olympic {
 	background-image: url(../img/olympic/001.jpg);
 }
-.foundations-ep{
-	background-image: url(../img/foundations-ep/001.jpg);
-}
-.louis-leeson{
+.louis-leeson {
 	background-image: url(../img/louis-leeson/001.jpg);
 }
-.olivia-mansfield{
-	background-image: url(../img/olivia-mansfield/001.jpg);
-}
-.sounds-of-the-samurai-1{
-	background-image: url(../img/sounds-of-the-samurai-1/001.jpg);
-}
-.kaleidoscope{
-	background-image: url(../img/kaleidoscope/001.jpg);
-}
-.forward3d{
+.forward3d {
 	background-image: url(../img/forward3d/001.jpg);
 }
-.cardwall{
+.cardwall {
 	background-image: url(../img/cardwall/001.jpg);
 }
-.fixfaff{
+.fixfaff {
 	background-image: url(../img/fixfaff/001.jpg);
 }
-.mol-events{
+.mol-events {
 	background-image: url(../img/mol-events/001.jpg);
 }
-.the-poetry-we-make{
+.the-poetry-we-make {
 	background-image: url(../img/the-poetry-we-make/001.jpg);
 }
-.london-fashion-week{
-	background-image: url(../img/london-fashion-week/001.jpg);
+.kalash-co {
+	background-image: url(../img/kalash-co/001.jpg);
+}
+.africa-ldn {
+	background-image: url(../img/africa-ldn/001.jpg);
+}
+.london-is-open {
+	background-image: url(../img/london-is-open/001.jpg);
+}
+.whatever-the-weather {
+	background-image: url(../img/whatever-the-weather/001.jpg);
 }
 
 /* project intros */
 
-#project-intro{
+#project-intro {
 	padding: 40px 0;
+}
+#project-intro p {
+	font-size: 24px;
+	padding-top: 20px;
 }
 
 /* project images */
 
-#project-img{
+#project-img {
 	padding-bottom: 40px;
 }
 
-img.marg{
+img.marg {
 	margin-top: 20px;
 }
 
 /* ------------------------------------------------------------ *\
 |* ------------------------------------------------------------ *|
-|* profile page
+|* about page
 |* ------------------------------------------------------------ *|
 \* ------------------------------------------------------------ */
 
-section#profile{
+section#bio {
 	margin-bottom: 80px;
 	padding-top: 100px;
 }
-#profile p{
+#bio p {
 	padding-bottom: 20px;
+	font-size: 30px;
 }
-
-/* ------------------------------------------------------------ *\
-|* ------------------------------------------------------------ *|
-|* contact page
-|* ------------------------------------------------------------ *|
-\* ------------------------------------------------------------ */
-
-#contact-img{
-	margin-top: 40px;
-	margin-bottom: 200px;
+#bio h1 {
+	font-size: 30px;
 }
-
 
 /* ------------------------------------------------------------ *\
 |* ------------------------------------------------------------ *|
@@ -376,29 +329,23 @@ section#profile{
 |* ------------------------------------------------------------ *|
 \* ------------------------------------------------------------ */
 
-#contact{
-	/*border-top: 1px solid #494d50;*/
+#contact {
 	width: 100%;
-	background-color: #ebecef;
+	background-color: #f3f4f5;
 }
-#contact .container{
+#contact .container {
 	padding: 80px 0 60px 0;
 }
-#contact .container .email{
+#contact .container .email {
 	text-align: center;
 }
-#contact .container .copyright{
+#contact .container .copyright {
 	text-align: right;
 }
-
-/* footer */
-
-footer{
-	background: #f2f3f5;
-	color: #000000;
-	width: 100%;
-	padding: 40px 0 20px 0;
-	text-align: right;
+#contact h1{
+	font-family:'GT-Haptik','GT-Walsheim',Helvetica,Arial,sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 /* ------------------------------------------------------------ *\
@@ -408,54 +355,56 @@ footer{
 \* ------------------------------------------------------------ */
 
 @media only screen and (max-width: 820px) {
-	#intro{
+	#intro {
 		background-size: 90%;
 	}
 }
 
 @media only screen and (max-width: 767px) {
-	.alpha{
+	.alpha {
 		padding-bottom: 20px;
 	}
-	#contact .container .alpha{
+	.twelve {
 		padding-bottom: 0px;
 	}
-	#contact .container .email{
-		text-align: left;
+	#contact h1{
+		margin-bottom: 20px;
 	}
-	#contact .container .copyright{
-		text-align: left;
+	#contact .container .alpha {
+		padding-bottom: 0px;
 	}
-	footer{
+	#contact .container .email {
 		text-align: left;
-		padding: 40px 0 1px 0;
+		margin-top: 20px;
 	}
-	section#profile{
+	#contact .container .copyright {
+		text-align: left;
+		margin-top: 20px;
+	}
+	section#about {
 		margin-bottom: 80px;
 		padding-top: 100px;
 	}
 }
 
-@media screen and (max-width: 568px){
-	.work{
-		width: 165px;
-	}
-	.profile{
-		width: 212px;
-	}
-	.contact{
-		width: 256px;
-	}
-	#logo{
+@media screen and (max-width: 568px) {
+	#nav-left {
 		margin: 20px 0 0 20px;
 	}
-	#nav-work{
-		margin: 20px 10px 0 0;
-	}
-	#nav-profile{
+	#nav-right {
 		margin: 20px 20px 0 0;
 	}
-	button#trigger-overlay{
-		margin: 20px 20px 0 0;
+	#nav-right a {
+		margin-left: 20px;
+	}
+	#project-intro p {
+		font-size: 21px
+	}
+	#bio p {
+		padding-bottom: 20px;
+		font-size: 21px;
+	}
+	#bio h1 {
+		font-size: 21px;
 	}
 }
