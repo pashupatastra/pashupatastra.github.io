@@ -251,9 +251,6 @@ a.imgwrap:hover {
 .no-more-heroes {
 	background-image: url(../img/no-more-heroes/001.jpg);
 }
-.olympic {
-	background-image: url(../img/olympic/001.jpg);
-}
 .louis-leeson {
 	background-image: url(../img/louis-leeson/001.jpg);
 }
@@ -283,6 +280,9 @@ a.imgwrap:hover {
 }
 .whatever-the-weather {
 	background-image: url(../img/whatever-the-weather/001.jpg);
+}
+.campaigns-hub {
+	background-image: url(../img/campaigns-hub/001.jpg);
 }
 
 /* project intros */
