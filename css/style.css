@@ -1,50 +1,51 @@
-/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);*/
-
 @font-face {
-	font-family:'GT-Walsheim';
-	src:url('../fonts/gt-walsheim-web.woff?1416498639') format('woff'),
-	url('../fonts/gt-walsheim-web.ttf?1416498640') format('truetype'),
-	url('../fonts/gt-walsheim-web.svg#gtwalsheimweb') format('svg');
-	font-weight:400;
-	font-style:normal;
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Medium.woff2') format('woff2'),
+       url('../fonts/Satoshi-Medium.woff') format('woff'),
+       url('../fonts/Satoshi-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
 }
 @font-face {
-	font-family:'GT-Walsheim';
-	src:url('../fonts/gt-walsheim-medium.woff?1416498645') format('woff'),
-	url('../fonts/gt-walsheim-medium.ttf?1416498642') format('truetype'),
-	url('../fonts/gt-walsheim-medium.svg#gtwalsheimmedium') format('svg');
-	font-weight:600;
-	font-style:normal;
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
+       url('../fonts/Satoshi-Bold.woff') format('woff'),
+       url('../fonts/Satoshi-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
 }
 @font-face {
     font-family:'GT-Haptik';
-    src: url('../fonts/gthaptik-webfont.woff2') format('woff2'),
-         url('../fonts/gthaptik-webfont.woff') format('woff');
+    src: url('../fonts/GT-Haptik-Regular.woff2') format('woff2'),
+         url('../fonts/GT-Haptik-Regular.woff') format('woff')
+         url('../fonts/GT-Haptik-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 html, body {
 	height: 100%;
-	font-family:'GT-Walsheim',Helvetica,Arial,sans-serif;
+	font-family:'Satoshi',sans-serif;
 	font-size: 16px;
 }
 p {
-	font-weight:400;
+	font-weight:500;
 	font-style:normal;
 	line-height: 1.6;
 	font-size: 16px;
 }
 
 h1 {
-	font-weight:600;
+	font-weight:700;
 	font-style:normal;
 	line-height: 1.6;
 	padding-bottom: 20px;
 	font-size: 16px;
 }
 h2 {
-	font-weight:600;
+	font-weight:700;
 	font-style:normal;
 	letter-spacing: 1px;
 	line-height: 1.6;
@@ -58,10 +59,10 @@ a:hover {
 	opacity: 0.2;
 }
 strong {
-	font-weight: 600;
+	font-weight: 700;
 }
 .hyperlink {
-	font-weight: 600;
+	font-weight: 700;
 	text-decoration: underline;
 }
 
@@ -240,7 +241,7 @@ a.imgwrap:hover {
 
 
 #project-title h1{
-	font-family:'GT-Haptik','GT-Walsheim',Helvetica,Arial,sans-serif;
+	font-family:'GT-Haptik','Satoshi',sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	font-size: 80px
@@ -343,7 +344,7 @@ section#bio {
 	text-align: right;
 }
 #contact h1{
-	font-family:'GT-Haptik','GT-Walsheim',Helvetica,Arial,sans-serif;
+	font-family:'GT-Haptik','Satoshi',sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
