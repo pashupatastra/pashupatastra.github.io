@@ -62,7 +62,9 @@ section {
   width: 70%;
   padding: 0 120px 40px 40px;
   display: block;
-
+}
+.indent p a {
+  color: #000000;
 }
 .no-indent {
   width: 100%;
