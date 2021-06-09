@@ -1,0 +1,249 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Medium.woff2') format('woff2'),
+       url('../fonts/Satoshi-Medium.woff') format('woff'),
+       url('../fonts/Satoshi-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
+       url('../fonts/Satoshi-Bold.woff') format('woff'),
+       url('../fonts/Satoshi-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+/* General styles */
+
+h1 {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  padding-bottom: 40px;
+}
+h2 {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  padding-bottom: 80px;
+}
+h2 a {
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.5s ease;
+}
+h2 a:hover {
+  opacity: 0.2;
+}
+p{
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+strong{
+  font-weight: 700;
+}
+section {
+  width: 100%;
+  display: block;
+  float: left;
+}
+.indent {
+  float: right;
+  width: 70%;
+  padding: 0 120px 40px 40px;
+  display: block;
+
+}
+.no-indent {
+  width: 100%;
+  display: block;
+  float: left;
+  padding: 0 40px;
+}
+.project-intro {
+  display: inline-block;
+  float: left;
+  padding: 160px 40px 10px 0;
+}
+.keyline {
+  height: 2px;
+  background-color: #000000;
+  width: 100%;
+  float: left;
+  display: block;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  display: inline;
+  width: 100%;
+  z-index: 1000;
+}
+#logo {
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s ease;
+  margin: 40px 0 0 40px;
+  float: left;
+  fill: #000000;
+}
+#logo:hover {
+  opacity: 0.2;
+}
+
+/* Landing */
+
+#landing {
+  padding-top: 160px;
+  color: #ffffff;
+}
+#landing p {
+  padding-bottom: 40px;
+  color: #ffffff;
+}
+#landing p a {
+  text-decoration: underline;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+#landing p a:hover {
+  text-decoration: none;
+  opacity: 0.2;
+}
+#landing h2 a {
+  color: #ffffff;
+}
+
+/* Footer */
+
+footer {
+  width:  100%;
+  margin-top: 80px;
+  float: left;
+  color: #000000;
+  padding-bottom: 40px;
+}
+footer a {
+  color: #000000;
+}
+footer a:hover {
+  text-decoration: none;
+}
+.footer-wrap {
+  padding: 40px;
+}
+.footer-wrap.keyline {
+  margin-bottom: 80px;
+}
+p.copyright {
+  text-align: right;
+}
+span.mobile-show{
+    display: none;
+  }
+span.mobile-hide{
+  display: inline;
+}
+
+/* Image grid */
+
+.full-width {
+  width: 100%;
+  padding: 10px 40px;
+  float: left;
+}
+.half-width-one {
+  width: 50%; 
+  display: inline-block;
+  float: left;
+  padding: 10px 10px 10px 40px;
+}
+.half-width-two {
+  width: 50%; 
+  display: inline-block;
+  float: left;
+  padding: 10px 40px 10px 10px;
+}
+
+/* Background colour change */
+
+/* Setting fade transition and default settings */
+body {
+  color: #000000;
+  background-color: #ffffff;
+  transition: background-color 1s ease;
+}
+
+/* panel styles */
+.panel {
+  /* min height incase content is higher than window height */
+  min-height: 100vh;
+   /*outline: 10px solid hotpink; */
+  /* turn above on to see the edge of panels */
+}
+
+/* colours */
+.color-black {
+  background-color: #000000;
+}
+.color-white {
+  background-color: #ffffff;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px) {
+  .indent {
+    width: 100%;
+    float: left;
+    padding: 0 40px;
+  }
+  footer .half-width-one,
+  footer .half-width-two {
+    width: 100%;
+    display: block;
+    padding: 10px 40px;
+  }
+  p.copyright {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  h2 {
+    font-size: 24px;
+    padding-bottom: 40px;
+  }
+  p{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .project-intro {
+    padding: 80px 40px 10px 0;
+  }
+  .half-width-one,
+  .half-width-two {
+    width: 100%;
+    display: block;
+    padding: 10px 40px;
+  }
+  span.mobile-hide{
+    display: none;
+  }
+  span.mobile-show{
+    display: inline;
+  }
+}
+
