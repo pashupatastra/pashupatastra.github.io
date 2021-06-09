@@ -189,7 +189,7 @@ body {
 /* panel styles */
 .panel {
   /* min height incase content is higher than window height */
-  min-height: 100vh;
+  /*min-height: 100vh;*/
    /*outline: 10px solid hotpink; */
   /* turn above on to see the edge of panels */
 }
@@ -222,22 +222,48 @@ body {
 }
 
 @media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
   h2 {
-    font-size: 24px;
-    padding-bottom: 40px;
+    font-size: 21px;
+    padding-bottom: 30px;
   }
   p{
     font-size: 16px;
     line-height: 24px;
   }
+  #logo {
+    margin: 20px 0 0 20px;
+  }
+  #landing {
+    padding-top: 120px;
+  }
   .project-intro {
-    padding: 80px 40px 10px 0;
+    padding: 120px 0 10px 0;
+  }
+  .indent {
+    padding: 0 20px;
+  }
+  .no-indent {
+    padding: 0 20px;
+  }
+  .full-width {
+    padding: 10px 20px;
   }
   .half-width-one,
   .half-width-two {
     width: 100%;
     display: block;
-    padding: 10px 40px;
+    padding: 10px 20px;
+  }
+  footer .half-width-one,
+  footer .half-width-two {
+    padding: 10px 20px;
+  }
+  .footer-wrap {
+    padding: 40px 20px;
   }
   span.mobile-hide{
     display: none;
