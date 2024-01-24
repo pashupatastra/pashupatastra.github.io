@@ -1,50 +1,56 @@
-// ANCHOR LINK SCROLL EASE
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
 
-$(document).ready(function() {
-	// scolling
-	$('a[href*=#]:not([href=#])').click(function() {
-	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	    var target = $(this.hash);
-	    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	    if (target.length) {
-	      $('html,body').animate({
-	        scrollTop: target.offset().top
-	      }, 800);
-	      return false;
-	    }
-	  }
-	});
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
 
-});
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
 
-// COLOUR BACKGROUND CHANGE
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-$(window).scroll(function() {
-  
-  // selectors
-  var $window = $(window),
-      $body = $('body'),
-      $panel = $('.panel');
-  
-  // Change 33% earlier than scroll position so colour is there when you arrive.
-  var scroll = $window.scrollTop() + ($window.height() / 3);
- 
-  $panel.each(function () {
-    var $this = $(this);
-    
-    // if position is within range of this panel.
-    // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
-    // Remember we set the scroll to 33% earlier in scroll var.
-    if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-          
-      // Remove all classes on body with color-
-      $body.removeClass(function (index, css) {
-        return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
-      });
-       
-      // Add class of currently active div
-      $body.addClass('color-' + $(this).data('color'));
-    }
-  });    
-  
-}).scroll();
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: none}";
+        document.body.appendChild(css);
+    };
