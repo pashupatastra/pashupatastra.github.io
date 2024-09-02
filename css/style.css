@@ -104,6 +104,7 @@ section.intro {
 /***** Footer  *****/
 
 footer {
+	float: left;
 	padding: 12rem 0 1.5rem 0;
 	margin: 0 0.75rem 1.5rem 0.75rem;
 }
@@ -188,7 +189,6 @@ footer {
 	.copyright {
 		display: block;
 		width: 100%;
-		margin: 0 0 0.75rem 0;
 	}
 	.footer-links {
 		display: block;
@@ -197,6 +197,6 @@ footer {
 	}
 	.footer-links a {
 		display: inline-block;
-		margin: 0 1.5rem 1.5rem 0;
+		margin: 0 1.5rem 1rem 0;
 	}
 }
