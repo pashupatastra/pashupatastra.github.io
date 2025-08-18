@@ -392,9 +392,6 @@ footer {
 	.heading-s {
 		font-size: 1.25rem;
 	}
-	.tag {
-		padding: 0.125rem 0.25rem 0.25rem 0.25rem;
-	}
 	.project-item .overlay {
 		bottom: 12px;
 		left: 12px;
