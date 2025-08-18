@@ -45,11 +45,13 @@ html {
 p {
 	padding-top: 2rem;
 }
+p.nopad {
+	padding-top: 0;
+}
 .text-link {
 	text-decoration: none;
 	color: #ffffff;
 	border-bottom: 1px solid #ffffff;
-	padding-bottom: 1px;
 	transition: all 0.3s ease-in-out;
 }
 .text-link:hover {
@@ -156,6 +158,18 @@ header {
 .text {
 	grid-area: text;
 }
+.quote-container {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-areas: '. . quote quote quote quote quote quote . . . .';
+	padding: 0 0 3rem 0;
+}
+.quote {
+	grid-area: quote;
+	padding: 0.5rem 0 0.5rem 2rem;
+	border-left: 4px solid #9918FF;
+}
 
 /***** CTA *****/
 
@@ -223,7 +237,8 @@ footer {
 .project-item {
 	overflow: hidden;
 	border-radius: 0.5rem;
-	background-color: #9918FF;
+	background: #9918FF;
+	background: linear-gradient(225deg,rgba(153, 24, 255, 1) 0%, rgba(118, 0, 204, 1) 50%, rgba(118, 0, 204, 1) 100%);
 	position: relative;
 }
 .project-item img{
@@ -256,7 +271,8 @@ footer {
 }
 .project-item:hover img {
 	opacity: 0.1;
-	filter: grayscale(1);
+	/*filter: grayscale(1);*/
+	filter: blur(0.25rem);
 }
 .project-item .overlay {
 	opacity: 0;
@@ -277,11 +293,17 @@ footer {
 .tag {
 	display: inline-block;
 	padding: 0.125rem 0.5rem 0.25rem 0.5rem;
-	background: #252525;
+	background: #9918FF;
 	border-radius: 0.5rem;
-	margin: 0.5rem 0.25rem 0 0;
+	margin: 0.5rem 0.5rem 0 0;
 	float: left;
 	font-weight: 550;
+}
+.project-thumb-tag {
+	margin: 0.25rem 0.5rem 0 0;
+}
+.bg-indigo {
+	background: #7600CC;
 }
 .project-detail .text-container {
 	padding: 2.5rem 0 3rem 0;
@@ -332,6 +354,9 @@ footer {
 	.text-container {
 		grid-template-areas: '. text text text text text text text text text text .';
 	}
+	.quote-container {
+		grid-template-areas: '. quote quote quote quote quote quote quote quote quote quote .';
+	}
 	.form-grid {
 		grid-template-areas: '. form form form form form form form form form form .';
 	}
@@ -343,6 +368,9 @@ footer {
 @media only screen and (max-width: 768px) { 
 	.text-container {
 		grid-template-areas: 'text text text text text text text text text text text text';
+	}
+	.quote-container {
+		grid-template-areas: 'quote quote quote quote quote quote quote quote quote quote quote quote';	
 	}
 	.form-grid {
 		grid-template-areas: 'form form form form form form form form form form form form';
@@ -361,6 +389,16 @@ footer {
 		font-size: 1.75rem;
 		line-height: 1.2;
 	}
+	.heading-s {
+		font-size: 1.25rem;
+	}
+	.tag {
+		padding: 0.125rem 0.25rem 0.25rem 0.25rem;
+	}
+	.project-item .overlay {
+		bottom: 12px;
+		left: 12px;
+	}
 	.copyright {
 		display: block;
 		width: 100%;
@@ -378,6 +416,7 @@ footer {
 @media only screen and (max-width: 480px) {
 	.projects-container,
 	.text-container,
+	.quote-container,
 	.form-grid, 
 	.form-grid-split,
 	.media-container {
