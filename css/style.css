@@ -488,8 +488,10 @@ section.blog-content {
 }
 .profile {
 	grid-area: profile;
-	border-radius: 0.5rem;
 	position: relative;
+}
+.profile img {
+	border-radius: 0.5rem;
 }
 .profile-container .text {
 	padding-top: 4rem;
