@@ -413,6 +413,7 @@ footer {
 	background-color: var(--card-bg);
 	border-radius: 0.5rem;
 	transition: all 0.3s ease-in-out;
+	margin-bottom: 1.5rem;
 }
 .thumb {
 	grid-area: thumb;
